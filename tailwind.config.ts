@@ -65,7 +65,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
