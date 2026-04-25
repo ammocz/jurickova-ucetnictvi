@@ -9,6 +9,11 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import hero from "@/assets/hero.jpg";
 import ilona from "@/assets/ilona.jpg";
+import logoStoneConnection from "@/assets/logos/stone-connection.png";
+import logoRgKamen from "@/assets/logos/rg-kamen.png";
+import logoJosefMatusik from "@/assets/logos/josef-matusik.png";
+import logoUnicolor from "@/assets/logos/unicolor.png";
+import logoUJasana from "@/assets/logos/u-jasana.png";
 
 const nav = [
   { label: "O nás", href: "#o-nas" },
@@ -69,9 +74,11 @@ const services = [
 ];
 
 const clientLogos = [
-  "logo_KDP", "logo_stoneses", "logo_rgkameny", "logo_josef_matusik",
-  "logo_iskerka", "cbdking_logo", "logo_elip", "logo_sscr",
-  "k_k_logo", "logo_zahorane", "STOARE_logo",
+  { src: logoStoneConnection, alt: "Stone Connection" },
+  { src: logoRgKamen, alt: "RG Kámen" },
+  { src: logoJosefMatusik, alt: "Josef Matušík — Centrum zpracování plechu" },
+  { src: logoUnicolor, alt: "K+K Unicolor" },
+  { src: logoUJasana, alt: "Hospůdka U Jasana" },
 ];
 
 const contactSchema = z.object({
@@ -354,13 +361,18 @@ const Index = () => {
                 Důvěřují nám
               </h2>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
               {clientLogos.map((logo) => (
                 <div
-                  key={logo}
-                  className="aspect-[3/2] rounded-xl bg-card border border-border grid place-items-center text-muted-foreground text-xs font-medium hover:border-accent/40 hover:text-foreground transition-smooth p-4 text-center"
+                  key={logo.alt}
+                  className="aspect-[3/2] rounded-xl bg-card border border-border grid place-items-center p-6 hover:border-accent/40 transition-smooth group"
                 >
-                  {logo.replace(/_/g, " ").replace(/logo/i, "").trim() || "Klient"}
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
                 </div>
               ))}
             </div>
