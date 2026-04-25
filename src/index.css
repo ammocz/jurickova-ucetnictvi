@@ -72,7 +72,7 @@
 }
 
 @layer utilities {
-  .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+  .font-display { font-family: 'Inter', system-ui, sans-serif; letter-spacing: -0.02em; }
   .font-sans { font-family: 'Inter', system-ui, sans-serif; }
   .bg-hero { background: var(--gradient-hero); }
   .bg-warm { background: var(--gradient-warm); }
