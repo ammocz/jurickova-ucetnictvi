@@ -194,7 +194,7 @@ const Index = () => {
             className="absolute inset-0 w-full h-full object-cover opacity-25"
             style={{ y: heroY }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(162_50%_12%)] via-[hsl(162_50%_12%/0.85)] to-transparent" aria-hidden />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-transparent" aria-hidden />
           <div className="relative max-w-7xl mx-auto px-5 lg:px-10 w-full py-20 md:py-28 grid lg:grid-cols-12 gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
