@@ -14,6 +14,11 @@ import logoRgKamen from "@/assets/logos/rg-kamen.png";
 import logoJosefMatusik from "@/assets/logos/josef-matusik.png";
 import logoUnicolor from "@/assets/logos/unicolor.png";
 import logoUJasana from "@/assets/logos/u-jasana.png";
+import logoSscr from "@/assets/logos/sscr.png";
+import logoCbdKing from "@/assets/logos/cbd-king.png";
+import logoStoare from "@/assets/logos/stoare.png";
+import logoZahorane from "@/assets/logos/zahorane.png";
+import logoElip from "@/assets/logos/elip.png";
 
 const nav = [
   { label: "O nás", href: "#o-nas" },
@@ -79,6 +84,11 @@ const clientLogos = [
   { src: logoJosefMatusik, alt: "Josef Matušík — Centrum zpracování plechu" },
   { src: logoUnicolor, alt: "K+K Unicolor" },
   { src: logoUJasana, alt: "Hospůdka U Jasana" },
+  { src: logoSscr, alt: "Sdružení škol cestovního ruchu Rožnov pod Radhoštěm" },
+  { src: logoCbdKing, alt: "CBD King" },
+  { src: logoStoare, alt: "STOARE — cesta ke změně" },
+  { src: logoZahorane, alt: "Záhořané" },
+  { src: logoElip, alt: "Elip Elektroinstalace Pavelek" },
 ];
 
 const contactSchema = z.object({
