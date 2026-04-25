@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,61 +6,60 @@
 
 @layer base {
   :root {
-    --background: 36 33% 97%;
-    --foreground: 220 30% 8%;
+    --background: 38 40% 97%;
+    --foreground: 160 30% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 8%;
+    --card-foreground: 160 30% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 8%;
+    --popover-foreground: 160 30% 10%;
 
-    --primary: 220 30% 8%;
-    --primary-foreground: 36 33% 97%;
+    --primary: 162 45% 18%;
+    --primary-foreground: 38 40% 97%;
 
-    --secondary: 30 20% 92%;
-    --secondary-foreground: 220 30% 8%;
+    --secondary: 38 30% 92%;
+    --secondary-foreground: 162 45% 18%;
 
-    --muted: 30 15% 90%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 38 25% 90%;
+    --muted-foreground: 160 12% 38%;
 
-    --accent: 22 95% 55%;
+    --accent: 36 60% 52%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 55%;
+    --destructive: 0 75% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 86%;
-    --input: 30 15% 86%;
-    --ring: 22 95% 55%;
+    --border: 38 20% 86%;
+    --input: 38 20% 86%;
+    --ring: 162 45% 18%;
 
-    --radius: 0.75rem;
+    --radius: 0.625rem;
 
-    --gradient-hero: radial-gradient(ellipse at top right, hsl(22 95% 55% / 0.25), transparent 60%), linear-gradient(180deg, hsl(220 35% 6%), hsl(220 30% 10%));
-    --gradient-accent: linear-gradient(135deg, hsl(22 95% 55%), hsl(14 90% 50%));
-    --shadow-elegant: 0 20px 60px -20px hsl(220 30% 8% / 0.25);
-    --shadow-glow: 0 0 80px hsl(22 95% 55% / 0.35);
+    --gradient-hero: linear-gradient(180deg, hsl(162 50% 12%) 0%, hsl(162 45% 18%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(36 60% 52%), hsl(28 65% 48%));
+    --shadow-elegant: 0 30px 80px -30px hsl(162 45% 18% / 0.25);
+    --shadow-card: 0 1px 3px hsl(160 30% 10% / 0.04), 0 12px 32px -12px hsl(162 45% 18% / 0.08);
+    --shadow-glow: 0 0 60px hsl(36 60% 52% / 0.3);
     --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .dark {
-    --background: 220 35% 6%;
-    --foreground: 36 33% 97%;
-    --card: 220 30% 9%;
-    --card-foreground: 36 33% 97%;
-    --popover: 220 30% 9%;
-    --popover-foreground: 36 33% 97%;
-    --primary: 36 33% 97%;
-    --primary-foreground: 220 30% 8%;
-    --secondary: 220 25% 14%;
-    --secondary-foreground: 36 33% 97%;
-    --muted: 220 25% 14%;
-    --muted-foreground: 220 10% 65%;
-    --accent: 22 95% 60%;
-    --accent-foreground: 220 30% 8%;
-    --border: 220 25% 16%;
-    --input: 220 25% 16%;
-    --ring: 22 95% 60%;
+    --background: 162 30% 7%;
+    --foreground: 38 40% 95%;
+    --card: 162 30% 10%;
+    --card-foreground: 38 40% 95%;
+    --primary: 38 40% 95%;
+    --primary-foreground: 162 45% 18%;
+    --secondary: 162 25% 14%;
+    --secondary-foreground: 38 40% 95%;
+    --muted: 162 25% 14%;
+    --muted-foreground: 38 15% 65%;
+    --accent: 36 60% 55%;
+    --accent-foreground: 162 45% 12%;
+    --border: 162 20% 18%;
+    --input: 162 20% 18%;
+    --ring: 36 60% 55%;
   }
 
   * { @apply border-border; }
@@ -73,11 +72,13 @@
 }
 
 @layer utilities {
-  .font-display { font-family: 'Fraunces', serif; }
+  .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
   .font-sans { font-family: 'Inter', system-ui, sans-serif; }
   .bg-hero { background: var(--gradient-hero); }
-  .bg-accent-gradient { background: var(--gradient-accent); }
+  .bg-warm { background: var(--gradient-warm); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .transition-smooth { transition: all 0.4s var(--transition-smooth); }
+  .text-balance { text-wrap: balance; }
 }
